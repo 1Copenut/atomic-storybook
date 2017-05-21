@@ -1,6 +1,10 @@
 "use strict"
 
 module.exports = {
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-css-modules"
+  ],
   "rules": {
     "at-rule-empty-line-before": [ "always", {
       except: [
@@ -102,11 +106,11 @@ module.exports = {
 			"composes",
 		]
 	}],
-    "rule-nested-empty-line-before": [ "always-multi-line", {
+    "rule-empty-line-before": [ "always-multi-line", {
       except: ["first-nested"],
       ignore: ["after-comment"],
     } ],
-    "rule-non-nested-empty-line-before": [ "always-multi-line", {
+    "rule-empty-line-before": [ "always-multi-line", {
       ignore: ["after-comment"],
     } ],
     "selector-attribute-brackets-space-inside": "never",
