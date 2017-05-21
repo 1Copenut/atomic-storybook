@@ -10,8 +10,8 @@ html {
 }
 
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	color: var(--textColorBlack);
 	font-size: var(--baseFontSize);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
