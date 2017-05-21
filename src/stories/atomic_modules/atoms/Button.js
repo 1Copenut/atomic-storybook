@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { base } from '../../styles/components/Button.css';
 
 function Button(props) {
@@ -11,10 +12,10 @@ function Button(props) {
 }
 
 Button.propTypes = {
-	className: React.PropTypes.string,
-	disabled: React.PropTypes.bool.isRequired,
-	text: React.PropTypes.string.isRequired,
-	onClick: React.PropTypes.func,
+	className: PropTypes.string,
+	disabled: PropTypes.bool.isRequired,
+	text: PropTypes.string.isRequired,
+	onClick: PropTypes.func,
 }
 
 Button.defaultProps = {

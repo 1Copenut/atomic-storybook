@@ -1,5 +1,5 @@
 import React from 'react';
-import { action } from '@kadira/storybook';
+import PropTypes from 'prop-types';
 
 import Button from '../atoms/Button';
 
@@ -7,9 +7,9 @@ import { flexbox } from '../../styles/objects/Layout.css';
 import { inline__block } from '../../styles/objects/Lists.css';
 import { secondary } from '../../styles/components/Button.css';
 
-const ButtonNames = ['Music', 'Cinema', 'Broadcast', 'Streaming'];
+const buttonNames = ['Music', 'Cinema', 'Broadcast', 'Streaming'];
 
-const ButtonItem = ButtonNames.map((item, index) => {
+const buttonItem = buttonNames.map((item, index) => {
 	if(index === 0 ) {
 		return (
 			<li className={ inline__block } key={ index }>
@@ -29,13 +29,14 @@ const ButtonItem = ButtonNames.map((item, index) => {
 const ButtonBar = (props) => (
 	<nav role='navigation' { ...props }>
 		<ul>
-			{ ButtonItem }
+			{ buttonItem }
 		</ul>
 	</nav>
 );
 
 ButtonBar.propTypes = {
-	className: React.PropTypes.string,
+	buttonItem: PropTypes.element,
+	className: PropTypes.string,
 }
 
 ButtonBar.defaultProps = {

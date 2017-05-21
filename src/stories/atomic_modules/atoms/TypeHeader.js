@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../styles/elements/Typography.css';
 
 function TypeHeader(props) {
@@ -50,9 +51,9 @@ function TypeHeader(props) {
 }
 
 TypeHeader.propTypes = {
-	className: React.PropTypes.string,
-	elem: React.PropTypes.string.isRequired,
-	text: React.PropTypes.string.isRequired,
+	className: PropTypes.string,
+	elem: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
 }
 
 TypeHeader.defaultProps = {
