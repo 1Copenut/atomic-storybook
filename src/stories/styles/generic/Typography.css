@@ -1,0 +1,17 @@
+@import '../settings/Colors.css';
+@import '../settings/MagicNumbers.css';
+
+/* Setting HTML font-size to 62.5%, which translates to 10px.
+ * This is a good default for all type setting, which will
+ * be done in EMs, and layout, which will be done in REMs.
+ */
+html {
+	font-size: 62.5%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: var(--textColorBlack);
+	font-size: var(--baseFontSize);
+}

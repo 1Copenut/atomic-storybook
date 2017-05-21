@@ -1,0 +1,35 @@
+/* Flexbox Layouts
+ *
+ * Flexbox is our primary layout style. It should be used
+ * before floats, positioning, or margin/padding combinations.
+ * Absoulte or fixed positioning for particular elements like
+ * menus, modals, flyouts, and label overlays are permissible,
+ * but Flexbox should be used for normal blocking, document
+ * flow, and source ordering.
+ */
+
+/* Common Rules -- DO NOT MODIFY -- */
+.flexbox__common {
+	align-content: flex-start;
+	display: flex;
+	flex-direction: row;
+}
+
+/* Composable Rules -- Nest variations no more than 1 deep */
+.flexbox {
+	/* Left aligned */
+	composes: flexbox__common;
+	justify-content: flex-start;
+
+	/* Centered */
+	&__justifyCenter {
+		composes: flexbox;
+		justify-content: center;
+	}
+
+	/* Right aligned */
+	&__justifyEnd {
+		composes: flexbox;
+		justify-content: flex-end;
+	}
+}

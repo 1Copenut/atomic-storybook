@@ -1,0 +1,20 @@
+@import '../settings/Colors.css';
+@import '../settings/MagicNumbers.css';
+
+.base {
+	background-color: var(--buttonColor);
+	border: 1px solid var(--borderColor);
+	border-radius: var(--borderRadius);
+	cursor: pointer;
+	padding: 3px 10px;
+
+	&:disabled {
+		opacity: 0.5;
+	}
+}
+
+.secondary {
+	composes: base;
+	background-color: var(--secondaryButtonColor);
+	color: var(--textColorWhite);
+}

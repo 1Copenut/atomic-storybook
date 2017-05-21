@@ -1,0 +1,13 @@
+/*! Box-sizing: border-box FTW | Courtesty Paul Irish | https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+
+/* Apply a natual box layout model to all elements, but allow components to change */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
