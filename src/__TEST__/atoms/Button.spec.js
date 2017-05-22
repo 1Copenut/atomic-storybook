@@ -25,15 +25,16 @@ describe('ATOM: Button -- component behavior', () => {
 		expect(wrapper.text()).to.equal('Default text');
 	});
 
-	it('Passes a custom name prop', () => {
-		wrapper.setProps({ text: 'Custom text' });
-		expect(wrapper.text()).to.equal('Custom text');
-	});
-
 	it('Passes the expected class name props', () => {
 		expect(wrapper.hasClass('foo')).to.equal(true);
 		expect(wrapper.hasClass('bar')).to.equal(true);
 	});
+
+	it('Passes a custom name prop', () => {
+		wrapper.setProps({ text: 'Custom text' });
+		expect(wrapper.text()).to.equal('Custom text');
+	});
+	
 
 	it('Passes the disabled prop a true value', () => {
 		wrapper.setProps({ disabled: true });

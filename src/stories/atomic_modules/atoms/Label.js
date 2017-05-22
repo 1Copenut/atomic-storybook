@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { base } from '../../styles/components/Button.css';
 
 function Label(props) {
 	const { text, ...rest } = props;
 	return (
-		<label>{ text }</label>
+		<label { ...rest }>{ text }</label>
 	);
 }
 
 Label.propTypes = {
-	
+	className: PropTypes.string,
+	htmlFor: PropTypes.string,
+	text: PropTypes.string.isRequired,
 }
 
 Label.defaultProps = {
-	
+	text: 'Input label',
 }
 
 export default Label;

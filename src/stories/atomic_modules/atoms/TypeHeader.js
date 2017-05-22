@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../styles/elements/Typography.css';
 
 function TypeHeader(props) {
 	const { elem, text, ...rest } = props;
