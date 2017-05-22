@@ -6,6 +6,7 @@ import './styles/generic/Typography.css';
 
 import './styles/elements/Forms.css';
 import './styles/elements/Lists.css';
+import './styles/elements/Typography.css';
 
 import './styles/objects/Layout.css';
 import './styles/objects/Lists.css';

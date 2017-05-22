@@ -11,4 +11,5 @@ input[type='url'] {
 
 label {
 	display: block;
+	width: 100%;
 }

@@ -33,3 +33,10 @@
 		justify-content: flex-end;
 	}
 }
+
+.flexflow {
+	/* Column */
+	&__column {
+		flex-flow: column;
+	}
+}
