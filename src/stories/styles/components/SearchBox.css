@@ -1,0 +1,12 @@
+@import '../settings/MagicNumbers.css';
+
+.container {
+	label {
+		margin-bottom: 1rem;
+	}
+
+	input + button {
+		border-radius: 0 var(--borderRadius) var(--borderRadius) 0;
+		margin-left: -1px;
+	}
+}
