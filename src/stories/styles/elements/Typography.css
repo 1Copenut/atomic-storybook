@@ -29,3 +29,12 @@ h5 {
 h6 {
 	font-size: 1.944em;
 }
+
+p,
+a,
+button,
+input,
+label,
+li {
+	font-size: 1.6rem;
+}
