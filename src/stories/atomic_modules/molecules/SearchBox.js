@@ -8,9 +8,8 @@ import Button from '../atoms/Button';
 import Layout from '../../styles/objects/Layout.css';
 import SearchBoxStyles from '../../styles/components/SearchBox.css';
 
-function SearchBox(props) {
+const SearchBox = (props) => {
 	const { labelText, placeholderText, ...rest } = props;
-
 	return (
 		<section className={ `${SearchBoxStyles.container} ${Layout.flexbox} ${Layout.flexflow__column}` } role='search' { ...rest }>
 			<Label htmlFor='search-input' text='Search by name' />
@@ -25,7 +24,7 @@ function SearchBox(props) {
 SearchBox.propTypes = {
 	Button: PropTypes.element,
 	Input: PropTypes.element,
-	Button: PropTypes.element,
+	Label: PropTypes.element,
 }
 
 export default SearchBox;
