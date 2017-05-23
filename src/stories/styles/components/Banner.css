@@ -1,0 +1,13 @@
+@import '../settings/Colors.css';
+@import '../tools/Mixins.css';
+
+.container {
+	background: var(--bannerColor) url('../../images/acme-poster.jpg') top left no-repeat;
+	height: 15rem;
+	overflow: hidden;
+	width: 100%;
+}
+
+.header {
+	@mixin sr-only;
+}

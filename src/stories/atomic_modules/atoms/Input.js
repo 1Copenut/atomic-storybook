@@ -21,6 +21,7 @@ class Input extends Component {
 				disabled={ this.props.disabled }
 				id={ this.props.id }
 				type={ this.props.type }
+				placeholder={ this.props.placeholder }
 				value={ this.state.inputVal }
 				onChange={ this.handleInputChange } />
 		);
@@ -38,7 +39,8 @@ Input.propTypes = {
 
 Input.defaultProps = {
 	disabled: false,
-	type: 'text'
+	placeholder: '',
+	type: 'text',
 }
 
 export default Input;

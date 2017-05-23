@@ -1,0 +1,23 @@
+@import '../settings/Colors.css';
+@import '../settings/MagicNumbers.css';
+@import '../tools/Mixins.css';
+
+.container {
+	flex-direction: column;
+
+	section:last-of-type {
+		align-self: flex-end;
+		border-radius: var(--borderRadius);
+		background-color: rgba(0 0 0, 0.85);
+		margin: -6rem 2rem 0 0;
+		padding: 0.8rem;
+
+		label {
+			@mixin sr-only;
+		}
+
+		input {
+			width: auto;
+		}
+	}
+}
