@@ -4,6 +4,7 @@ import { base } from '../../styles/components/Button.css';
 
 function Button(props) {
 	const { text, ...rest } = props;
+	
 	return (
 		<button { ...rest }>
 			{ props.text }
