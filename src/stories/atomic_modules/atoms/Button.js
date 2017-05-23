@@ -6,7 +6,7 @@ const Button = (props) => {
 	const { text, ...rest } = props;
 	return (
 		<button { ...rest }>
-			{ props.text }
+			{ text }
 		</button>
 	);
 }
