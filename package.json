@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "axe-core": "^2.3.1",
     "chai": "^3.5.0",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
@@ -16,6 +17,7 @@
     "postcss-nested": "^1.0.0",
     "postcss-selector-not": "^2.0.0",
     "react-addons-test-utils": "^15.4.2",
+    "react-axe": "^2.1.6",
     "react-dom": "^15.5.4",
     "react-scripts": "0.8.5",
     "react-test-renderer": "^15.5.4",
