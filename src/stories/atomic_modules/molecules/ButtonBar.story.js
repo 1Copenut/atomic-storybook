@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 import { checkA11y } from 'storybook-addon-a11y';
 
 import Layout from '../../styles/objects/Layout.css';
