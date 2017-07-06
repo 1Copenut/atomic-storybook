@@ -10,7 +10,7 @@ module.exports = {
 				test: /\.css$/,
 				use: ExtractTextPlugin.extract({
 					fallback: "style-loader",
-					use: "css-loader?modules=true&localIdentName=[name]__[local]__[hash:base64:5]"
+					use: "css-loader?modules=true&localIdentName=[name]__[local]__[hash:base64:5]!postcss-loader"
 				})
 			},
 			
