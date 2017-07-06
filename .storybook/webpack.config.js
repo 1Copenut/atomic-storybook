@@ -1,17 +1,22 @@
-var StyleLintPlugin = require('stylelint-webpack-plugin');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
+
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.css$/,
-				loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules=true&localIdentName=[name]__[local]__[hash:base64:5]!postcss-loader'),
+				use: ExtractTextPlugin.extract({
+					fallback: "style-loader",
+					use: "css-loader?modules=true&localIdentName=[name]__[local]__[hash:base64:5]!postcss-loader"
+				})
 			},
 			
 			{
 		        test: /\.(gif|png|jpe?g|svg)$/i,
-		        loaders: [
+		        use: [
 		        	'file-loader',
 		        	'image-webpack-loader'
 		    	]
@@ -19,23 +24,25 @@ module.exports = {
 		]
 	},
 
-	postcss: function(webpack) {
-		return [
-			require('postcss-import')({ addDependencyTo: webpack }),
-			require('postcss-cssnext'),
-			require('postcss-mixins'),
-			require('postcss-nested'),
-			require('postcss-selector-not'),
-			require('postcss-discard-comments'),
-			require('postcss-reporter'),
-			require('immutable-css'),
-		];
-	},
-
 	plugins: [
+		new webpack.LoaderOptionsPlugin({
+			test: /\.css$/,
+			options: {
+				postcss: [
+					require('postcss-import')({ addDependencyTo: webpack }),
+					require('postcss-cssnext'),
+					require('postcss-mixins'),
+					require('postcss-nested'),
+					require('postcss-selector-not'),
+					require('postcss-discard-comments'),
+					require('postcss-reporter'),
+					require('immutable-css')
+				]
+			}
+		}),
 		new StyleLintPlugin({
 			files: './src/stories/**/*.css'
 		}),
-		new ExtractTextPlugin("main.css"),
-	],
+		new ExtractTextPlugin("main.css")
+	]
 }
