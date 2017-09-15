@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "@storybook/react": "^3.2.8",
+    "axe-core": "^2.4.1",
     "chai": "^3.5.0",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",

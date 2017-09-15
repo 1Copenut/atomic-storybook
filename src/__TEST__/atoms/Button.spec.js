@@ -1,7 +1,9 @@
 import React from 'react';
 import sinon from 'sinon';
+import axe from 'axe-core';
 import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
+import { mountToDoc } from '../helpers/test-helpers';
 import Button from '../../stories/atomic_modules/atoms/Button';
 
 let wrapper;
@@ -57,6 +59,19 @@ describe('ATOM: Button -- component behavior', () => {
 
 		customWrapper.find('button').simulate('click');
 		expect(spy.calledOnce).to.be.false;
+	});
+
+	it('Has no aXe violations', done => {
+		const component = mountToDoc(
+			<Button />
+		);
+		const node = component.getDOMNode();
+
+		axe.run(node, (err, { violations }) => {
+			expect(err).to.equal(null);
+			expect(violations).to.have.length(0);
+			done();
+		});
 	});
 });
 
