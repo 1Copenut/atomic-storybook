@@ -1100,3 +1100,4 @@ There are also reports that *uninstalling* Watchman fixes the issue. So if nothi
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
 0
+
